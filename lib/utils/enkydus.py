@@ -16,11 +16,6 @@ def str_xor(secret, key):
 flag_enc = chr(0x06) + chr(0x01) + chr(0x05) + chr(0x1f) + chr(0x01) + chr(0x07) + chr(0x02) + chr(0x0b) + chr(0x10) + chr(0x5e) + chr(0x57) + chr(0x16) + chr(0x0d) + chr(0x31) + chr(0x22) + chr(0x5c) + chr(0x3b) + chr(0x42) + chr(0x0d) + chr(0x5d) + chr(0x34) + chr(0x27) + chr(0x57) + chr(0x02) + chr(0x3a) + chr(0x23) + chr(0x0a) + chr(0x0e) + chr(0x2d) + chr(0x36) + chr(0x18)
 
 
-def print_flag():
-  flag = str_xor(flag_enc, 'enkidu')
-  print(flag)
-
-
 def print_encouragement():
   encouragements = ["'You can do it!', 'Keep it up!', 'Look how far you've come!'"]
   choice = random.choice(range(0, len(encouragements)))
@@ -44,8 +39,7 @@ def main():
       print_encouragement()
       
     elif choice == 'b':
-      print_flag()
-      print('\nOops! I must have misplaced the print_flag function! Check my source code!\n\n')
+        print('\nOops! I must have misplaced the print_flag function! Check my source code!\n\n')
       
     elif choice == 'c':
       sys.exit(0)
